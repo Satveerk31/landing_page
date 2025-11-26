@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SparkNotes Pro — Smart Study Assistant</title>
+
+  <!-- preload hero image for slightly faster rendering -->
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1584697964154-9ab36b3c12c3?q=80&w=1200" />
+
+  <!-- main stylesheet (ensure file name matches) -->
+  <link rel="stylesheet" href="./style_page.css" />
+</head>
+<body>
+  <!-- Loading overlay (visible until JS hides it) -->
+  <div id="loading-overlay" class="loading-overlay" aria-hidden="false">
+    <div class="loader" role="status" aria-live="polite">
+      <div class="logo-sm" aria-hidden="true">SP</div>
+      <div class="dots" aria-hidden="true"><span></span><span></span><span></span></div>
+      <div class="loading-text">Preparing your study space…</div>
+    </div>
+  </div>
+
+  <!-- Main page (hidden by default until JS shows it) -->
+  <div class="container" id="page" style="visibility:hidden;" aria-busy="true">
+    <header class="site-header">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">SP</div>
+        <div>
+          <div class="brand-title">SparkNotes Pro</div>
+          <div class="brand-sub">AI study assistant • Summaries • Practice</div>
+        </div>
+      </div>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#features">Features</a>
+        <a href="#plans">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <button class="cta-btn" id="get-started">Get Started</button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="hero" aria-labelledby="hero-heading">
+        <div class="hero-left">
+          <h1 id="hero-heading">Study faster. Remember longer.</h1>
+          <p class="lead">Create smart summaries, generate practice questions, and get personalised study plans — all inside one lightweight app.</p>
+
+          <div class="features">
+            <div class="feature"><strong>Summaries</strong><div class="small">1-page revision cards</div></div>
+            <div class="feature"><strong>Practice</strong><div class="small">Auto MCQs & short answers</div></div>
+            <div class="feature"><strong>Plans</strong><div class="small">Custom study schedules</div></div>
+          </div>
+
+          <div class="cta-row">
+            <button class="cta-btn" id="primary-cta">Start free</button>
+            <button class="outline-btn" id="demo">See demo</button>
+          </div>
+
+          <div class="cards">
+            <div class="card"><h3>For Students</h3><p class="small">Daily revision short-cards.</p></div>
+            <div class="card"><h3>For Teachers</h3><p class="small">Build question banks and summaries.</p></div>
+            <div class="card"><h3>For Learners</h3><p class="small">Summarise books & articles.</p></div>
+          </div>
+        </div>
+
+        <aside class="hero-ill" aria-hidden="true">
+          <img src="https://images.unsplash.com/photo-1584697964154-9ab36b3c12c3?q=80&w=1200" alt="Study dashboard illustration" />
+        </aside>
+      </section>
+
+      <!-- Features + Pricing -->
+      <section id="features" class="features-section">
+        <h2>What you get</h2>
+        <p class="small">Everything you need to turn notes into results.</p>
+
+        <div class="grid">
+          <div>
+            <h3>AI-powered Summaries</h3>
+            <p class="small">Paste notes or upload PDFs to get crisp one-page summaries.</p>
+
+            <h3>Practice & Testing</h3>
+            <p class="small">Auto-generate MCQs and short-answer prompts tailored to topics.</p>
+
+            <h3>Smart Study Plans</h3>
+            <p class="small">Tell us your exam date and we build a daily plan that adapts.</p>
+          </div>
+
+          <div>
+            <div class="card pricing-card">
+              <h3>Pricing</h3>
+              <p class="small"><strong>Free</strong> — Basic summaries, 5 uploads / month</p>
+              <p class="small"><strong>Pro</strong> — $6 / month — unlimited summaries</p>
+              <button class="cta-btn" id="signup-cta">Join Pro</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA strip -->
+      <div class="cta-strip">
+        <div>
+          <div class="bold">Ready to level up your study?</div>
+          <div class="small">Start free — no credit card required.</div>
+        </div>
+        <button class="cta-btn" id="start2">Create account</button>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div>&copy; 2025 SparkNotes Pro</div>
+      <div class="small">Built for students • Terms • Privacy</div>
+    </footer>
+  </div>
+
+  <!-- Modal for magic link -->
+  <div class="modal-back" id="modal" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <h3 id="modal-title">Create your free account</h3>
+      <p class="small">We'll email you a magic link — no password needed.</p>
+
+      <!-- Honeypot (optional) could be added server-side if needed -->
+      <input type="email" id="email" placeholder="Your email" aria-label="Email address" />
+      <div style="margin-top:12px;display:flex;gap:8px;">
+        <button class="cta-btn" id="modal-send">Send link</button>
+        <button class="outline-btn" id="modal-close">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main JS (ensure file name matches exactly) -->
+  <script src="./script_page.js"></script>
+</body>
+</html>
+
