@@ -5,14 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SparkNotes Pro — Smart Study Assistant</title>
 
-  <!-- preload hero image for slightly faster rendering -->
   <link rel="preload" as="image" href="https://images.unsplash.com/photo-1584697964154-9ab36b3c12c3?q=80&w=1200" />
 
-  <!-- main stylesheet (ensure file name matches) -->
   <link rel="stylesheet" href="./style_page.css" />
 </head>
 <body>
-  <!-- Loading overlay (visible until JS hides it) -->
   <div id="loading-overlay" class="loading-overlay" aria-hidden="false">
     <div class="loader" role="status" aria-live="polite">
       <div class="logo-sm" aria-hidden="true">SP</div>
@@ -21,7 +18,6 @@
     </div>
   </div>
 
-  <!-- Main page (hidden by default until JS shows it) -->
   <div class="container" id="page" style="visibility:hidden;" aria-busy="true">
     <header class="site-header">
       <div class="brand">
@@ -41,7 +37,6 @@
     </header>
 
     <main>
-      <!-- Hero -->
       <section class="hero" aria-labelledby="hero-heading">
         <div class="hero-left">
           <h1 id="hero-heading">Study faster. Remember longer.</h1>
@@ -70,7 +65,6 @@
         </aside>
       </section>
 
-      <!-- Features + Pricing -->
       <section id="features" class="features-section">
         <h2>What you get</h2>
         <p class="small">Everything you need to turn notes into results.</p>
@@ -98,7 +92,6 @@
         </div>
       </section>
 
-      <!-- CTA strip -->
       <div class="cta-strip">
         <div>
           <div class="bold">Ready to level up your study?</div>
@@ -114,13 +107,11 @@
     </footer>
   </div>
 
-  <!-- Modal for magic link -->
   <div class="modal-back" id="modal" aria-hidden="true">
     <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
       <h3 id="modal-title">Create your free account</h3>
       <p class="small">We'll email you a magic link — no password needed.</p>
 
-      <!-- Honeypot (optional) could be added server-side if needed -->
       <input type="email" id="email" placeholder="Your email" aria-label="Email address" />
       <div style="margin-top:12px;display:flex;gap:8px;">
         <button class="cta-btn" id="modal-send">Send link</button>
@@ -129,8 +120,6 @@
     </div>
   </div>
 
-  <!-- Main JS (ensure file name matches exactly) -->
   <script src="./script_page.js"></script>
 </body>
 </html>
-
